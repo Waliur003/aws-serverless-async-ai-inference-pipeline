@@ -375,17 +375,29 @@ curl -X GET https://9gseie9u5i.execute-api.us-east-1.amazonaws.com/dev/jobs/job-
 
 Displays the live terminal executing `POST /jobs` returning HTTP `202 Accepted` with `job-8db49a2c` and `GET /jobs/job-93a021f5` returning HTTP `200 OK` with status `COMPLETED`, inference execution duration (`671ms`), token counts (`18` input / `95` output), and synthesized model output.
 
+<img width="1913" height="365" alt="Screenshot 1" src="https://github.com/user-attachments/assets/475a6373-b609-4c86-a79a-0caef220f703" />
+
+
 ### 2. DynamoDB Job State Store & Telemetry Items
 
 Shows the scanned records in DynamoDB table `genai-inference-jobs`, verifying state lifecycle tracking (`QUEUED` → `COMPLETED`), persisted execution durations, prompt records, and token metrics.
+
+<img width="1699" height="774" alt="Screenshot 2" src="https://github.com/user-attachments/assets/d246a2dd-0932-4060-9bd9-55764967afe5" />
+
 
 ### 3. Amazon SQS Main Processing Queue & Dead-Letter Queue
 
 Displays both active SQS queues in the AWS Console: `genai-inference-queue` with redrive policy enabled and `genai-inference-dlq` with 14-day retention, confirming 0 message buildup and normal message processing.
 
+<img width="1549" height="398" alt="Screenshot 3" src="https://github.com/user-attachments/assets/e432f1a9-68f8-4018-aeb6-ccf38297a7d5" />
+
+
 ### 4. CloudWatch Logs & Lambda Worker Execution Metrics
 
 Captures the CloudWatch monitoring dashboard for `genai-inference-worker`, highlighting sub-second billed execution durations ranging from 685ms to 775ms, 512 MB memory allocation, and zero execution failures.
+
+<img width="1607" height="876" alt="Screenshot 4" src="https://github.com/user-attachments/assets/7cb3802a-a673-482c-ae8e-769d69580054" />
+
 
 ---
 
