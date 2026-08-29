@@ -71,6 +71,7 @@ Configured a 180-second Visibility Timeout on the main queue and a Dead-Letter Q
 
 ## Architecture Diagram
 
+<img width="2338" height="827" alt="Architecture Diagram" src="https://github.com/user-attachments/assets/8372628b-297a-4ceb-bab2-d912541cd2f1" />
 
 
 ---
