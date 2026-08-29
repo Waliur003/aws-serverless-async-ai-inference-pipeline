@@ -1,0 +1,12 @@
+aws_region                  = "us-east-1"
+environment                 = "dev"
+dynamodb_table_name         = "genai-inference-jobs"
+sqs_queue_name              = "genai-inference-queue"
+sqs_dlq_queue_name          = "genai-inference-dlq"
+sqs_visibility_timeout      = 180
+lambda_producer_memory_size = 256
+lambda_producer_timeout     = 10
+lambda_worker_memory_size   = 512
+lambda_worker_timeout       = 120
+log_retention_in_days       = 14
+bedrock_model_id            = "amazon.nova-micro-v1:0"
